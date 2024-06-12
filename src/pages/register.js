@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-
 function Register() {
     const [isFormSubmitted, setIsFormSubmitted] = useState(false);
     const [email, setEmail] = useState("");
@@ -13,8 +12,6 @@ function Register() {
     const [checkCredentials, setCheckCredentials] = useState(false)
     const [matchPassword, setMatchPassword] = useState(false)
     const [notMatched, setNotMatched] = useState(false)
-
-
 
     const navigate = useNavigate();    
 
@@ -36,8 +33,6 @@ function Register() {
       if(email && password && confirmPassword && checkCredentials && matchPassword) {
           navigate("/confirm-registration")
       } 
-      
-      
     };
 
     const handleRedirection = () =>{

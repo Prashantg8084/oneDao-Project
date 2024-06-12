@@ -44,20 +44,12 @@
     position: relative;
     width: 380px;
     display: flex;
-    /* align-items: center;
-    justify-content: center; */
     height: 581px;
 }
 .label{
     font-weight: 600;
     font-size: 12px;
     color: #101010;
-    
-}
-::placeholder { 
-        
-    /* Firefox, Chrome, Opera */ 
-    color: blue; 
 }
 
 .right .formFields{
@@ -65,7 +57,6 @@
     width: 100%;
     flex-direction: column;
     vertical-align: middle;
-    /* align-items: center; */
     justify-content: center;
 }
 .right .para-message{
@@ -74,6 +65,11 @@
 .right .center{
     align-items: center;
     text-align: center;
+}
+.para-message .alert {
+    /* float :right; */
+    color:red
+    
 }
 .right h3{
     font-size: 24px;
@@ -134,6 +130,19 @@
     margin-top: 20px;
     font-size: 13px;
     font-weight: 400;
+}
+
+.formFields .alert{
+    display: inline-block;
+}
+
+.formFields .alert svg{
+    float: right;
+    margin-top: 5px;
+}
+
+input::placeholder {
+    font-size: 12px;
 }
 
 

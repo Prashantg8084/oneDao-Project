@@ -4,6 +4,8 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Alert from 'react-bootstrap/Alert';
 import "../assets/css/common.css";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 
 function Login() {
@@ -13,6 +15,7 @@ function Login() {
   const [userPassword, setUserPassword] = useState("");
   const [checkPass, setCheckPass] = useState(false);
   const [isRegistered, setIsRegistered] = useState(false);
+  const [isLoggedout, setIsLoggedout] = useState(false);
 
   const navigate = useNavigate();
 
@@ -21,7 +24,17 @@ function Login() {
     if(url.indexOf("success") > -1){
       setIsRegistered(true);
     }
+
+    if(url.indexOf("loggedout") > -1){
+      setIsLoggedout(true);
+    }
   }, [])
+
+  useEffect(() => {
+    if(checkEmail && checkPass){
+      navigate("/dashboard")
+    }
+  }, [checkEmail, checkPass])
 
   const handleRedirection = () => {
     navigate('/signup')
@@ -44,9 +57,6 @@ function Login() {
     }else{
       setCheckPass(false);
     }
-    if(userEmail && userPassword && checkEmail && checkPass){
-      navigate("/dashboard")
-    }
   }
   
   const updateEmailValue = (value) => {
@@ -56,8 +66,11 @@ function Login() {
   const updatePasswordValue = (value) => {
     setUserPassword(value);
   }
-  const handleAlert =() =>{
+  
+  const handleAlert = (e) =>{
+    e.preventDefault();
     setIsRegistered(false)
+    setIsLoggedout(false)
   }
 
   return (
@@ -71,8 +84,13 @@ function Login() {
             {isRegistered &&
               <Alert variant="success">
                 User registered Successfully.
-                {/* <button </button> */}
-                <Button onClick ={()=>handleAlert()}>X</Button>
+                <FontAwesomeIcon icon={faXmark} onClick ={(e)=>handleAlert(e)} />
+              </Alert>
+            }
+            {isLoggedout &&
+              <Alert variant="success">
+                User loggedout Successfully.
+                <FontAwesomeIcon icon={faXmark} onClick ={(e)=>handleAlert(e)} />
               </Alert>
             }
             <Form>

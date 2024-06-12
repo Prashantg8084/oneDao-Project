@@ -4,7 +4,6 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import "../assets/css/common.css";
 
-
 function RegisterConfirmation() {
   const [otp, setOtp] = useState([]);
   const [validate, setValidate] = useState(false);

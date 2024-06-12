@@ -5,19 +5,13 @@ import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
 import "../assets/css/dashboard.css";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-// import{fa-faDroplet} from '@fortawesome/free-solid-svg-icons'
-// import { faTableColumns } from '@fortawesome/free-solid-svg-icons/faDroplet';
 import { faTableColumns,faCar,faBars,faHandsClapping,faRightFromBracket,
     faUsers,faIdCard,faEarthAmericas,faCarOn,faCodeBranch,faUsersLine,faSliders,faCircleDollarToSlot,faFolderClosed,faArrowRight }
  from '@fortawesome/free-solid-svg-icons';
-import Pagination from 'react-bootstrap/Pagination';
 import myImage from '../assets/images/userss.jpg';
-
-
 
 const Dashboard = () => {
     const[data, setData] = useState([]);
-    const[inputData, setInputData] = useState('');
     const [tableData, setTableData] = useState([]);
     const navigate = useNavigate();
 
@@ -25,24 +19,17 @@ const Dashboard = () => {
         fetch('https://reqres.in/api/users?page=1')
         .then(response=>response.json())
         .then(result=>setData(result.data))
-        console.log(data);
 
         fetch("https://jsonplaceholder.typicode.com/users")
         .then(response=>response.json())
         .then(result=>setTableData(result))
-
     },[])
     
-    
-
     const handleLogout = (e) => {
         e.preventDefault();
-        navigate('/')
+        navigate('/login?loggedout')
     }
 
-    const search = data.filter(name=>{
-        name.first_name.toLowerCase().includes(inputData.toLowerCase())
-    })
   return (
     <div className='main-dashboard dashboard adminPanel'>
         <div className='left'>
@@ -58,7 +45,7 @@ const Dashboard = () => {
             <h3>Main Menu</h3>
             <nav className="navbar-bar ">
                 <ul className="navbar">
-                    <li className="nav-item active"><a className="nav-link" href="#"><FontAwesomeIcon icon={faTableColumns}  />Dashboard</a></li>
+                    <li className="nav-item active"><a className="nav-link" href="#"><FontAwesomeIcon icon={faTableColumns}  />Dashboard</a><div className='angleBorderTop'></div><div className='angleBorderBottom'></div></li>
                     <li className="nav-item"><a className="nav-link" href="#"><FontAwesomeIcon icon={faCar} />Orders</a></li>
                     <li className="nav-item"><a className="nav-link" href="#"><FontAwesomeIcon icon={faUsers} />Clients</a></li>
                     <li className="nav-item"><a className="nav-link" href="#"><FontAwesomeIcon icon={faIdCard} />Drivers</a></li>
@@ -75,22 +62,17 @@ const Dashboard = () => {
         <div className='right content'>
             <div className='top'>
                 <div className='header-section'>
-                    {/* <div className='left-header'> */}
+                    <div className='left-header col-md-10'>
                         <FontAwesomeIcon icon={faBars} />
                         <h5>Good Morning , Prashant</h5>
                         <FontAwesomeIcon icon={faHandsClapping} />
-                        <span>You have <span className='highlights'>1 new message</span></span>
-                    {/* </div> */}
-                    {/* <div className='right-header'> */}
-                        <div className='log-out'>
-                            <FontAwesomeIcon icon={faRightFromBracket} onClick={(e)=>handleLogout(e)} />
-                                <h6>logout</h6>
-                        {/* </div> */}
+                        <p>You have <span className='highlights'>1 new message</span></p>
+                    </div>
+                    <div className='log-out col-md-2'>
+                        <FontAwesomeIcon icon={faRightFromBracket} onClick={(e)=>handleLogout(e)} />
                     </div>
                 </div>
-                   
-                
-                <div className='knowledgebase'>
+                <div className='knowledgebase col-md-8'>
                     <h5>Knowledge Base</h5>
                     <div className='infoCards'>
                         <Card
@@ -133,11 +115,9 @@ const Dashboard = () => {
                     <div className='chart'>
                         
                     </div>
-                    
                 </div>
-                <div className='topDrivers'>
+                <div className='topDrivers col-md-4'>
                     <h5>Top Drivers</h5>
-                    {console.log(data)}
                     {(data.length >= 1) &&
                         data.map(item => 
                             <Card key={item.id}>
@@ -150,15 +130,12 @@ const Dashboard = () => {
                                     <Card.Title>Orders: 5</Card.Title>
                                     <Card.Title>Income: $10</Card.Title>
                                 </div>
-                                    
                             </Card>
                         )
                     }
                 </div>
-
-
             </div>
-            <div className='table'>
+            <div className='table col-md-12'>
                 {tableData &&
                     <Table striped bordered hover>
                     <thead>
@@ -196,35 +173,12 @@ const Dashboard = () => {
                                 </tr>
                             )
                         }
-                    
-                    
                     </tbody>
                 </Table>
                 }
             </div>
-            {/* <div className='header'>
-                <div className='left-half'>
-                    <h3>Good Morning Prashant</h3>
-                    <div className="rounded-circle overflow-hidden">
-                        <img src="https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg?w=740&t=st=1694269159~exp=1694269759~hmac=c8c65095b670091331a550b674305943e6a42c710a45b7356ecfe851d77b916b" alt="Profile" className="img-fluid profile" />
-                    </div>
-                    <div className="ml-2 bell-icon">
-                    </div>
-                
-                </div>
-                <div className='right-half'></div>
-            </div> */}
         </div>
-            {/* <Pagination>{items}</Pagination> */}
-
-        
-
-          
-                 
     </div>
-        
-
-    
   )
 }
 
