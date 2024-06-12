@@ -41,9 +41,11 @@ Below are the list of screens which are build.
 4. Used font awesome icons wherever required.
 5. Added Logout feature.
 
-# Getting Started with Create React App
+In order to setup the project and test, follow below process:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Download the code from the repository.
+2. Run `npm install` in the downloaded folder to install the project and its dependencies.
+3. Run `npm start` in the downloaded folder to check the app.
 
 ## Available Scripts
 
@@ -57,11 +59,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
@@ -71,7 +68,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
