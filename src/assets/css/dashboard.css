@@ -1,0 +1,347 @@
+.adminPanel{
+    background: #000;
+}
+.adminPanel .left{
+    width: 278px;
+    display: inline-block;
+    float:left;
+}
+.adminPanel .left .profile-section{
+    /* border: 2px solid white; */
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center;
+    align-items: center; */
+    
+    width: 180px;
+    height: 50px;
+    /* padding: 20px; */
+    margin: 35px;
+    margin-bottom: -40px;
+}
+.adminPanel .left .profile-section .card {
+    
+    /* margin-bottom: 10px; */
+    width: 100%;
+    flex-direction: row;
+    /* padding: 8px 10px 0 10px; */
+    background-color: #000;
+    
+}
+
+
+.left .profile-section .card img {
+    
+    max-height: 40px;
+    max-width: 40px;
+    /* border: 2px solid red; */
+    display:inline-block;
+    /* background: url('../images/users.jpeg'); */
+    background-repeat: no-repeat;
+    /* margin: 2px; */
+    /* display: inline-block; */
+
+    border-radius: 100px;
+    /* margin-top: 10px; */
+}
+.left .profile-section .profile-detail{
+    display: inline-block;
+    width: 140px;
+    margin-left:10px;
+}
+.left .profile-section .profile-detail .card-title.title-name{
+    color:#fff;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 0;
+}
+.left .profile-section .profile-detail .card-title.title-contact{
+    color: rgb(241, 240, 238);
+    font-weight: 400;
+    font-size: 11px;
+}
+
+
+.left .profile-section .card .card-title{
+    font-size: 13px;
+}
+/* .left .profile-section .card  h3{
+    font-size: 20px;
+    color: #995656;
+} */
+.adminPanel .right{
+    width: calc(100% - 310px);
+    display: inline-block;
+    background: #fff;
+    border-radius: 20px;
+    padding:20px;
+    margin: 20px 0;
+    height: 100%
+}
+.left h3{
+    text-transform: uppercase;
+    margin-left: 20px;
+    margin-top: 60px;
+    font-size: 16px;
+    color: #FFFFFF99;
+}
+nav {
+    background-color: #000;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    font-size: 20px;
+}
+    
+    
+.navbar .nav-item {
+    padding: 10px 30px;
+    width: 100%;
+    font-size: 14px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.navbar .nav-item:hover {
+    background-color: #fff;
+    border-radius: 50px 0 0 50px;
+} 
+.navbar .nav-item:hover a {
+    color: #0096ff;
+}
+.navbar-nav .nav-item a {
+    color: #fff;
+}
+.navbar li.active {
+    background-color: #fff;
+    border-radius: 50px 0 0 50px;
+    color:#0096ff
+}
+.nav-item .nav-link svg{
+    margin-right: 18px;
+}
+.right .infoCards{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 95%;
+}
+.right table{
+    width: 100%;
+    overflow-x: auto;
+}
+.right table th,
+.right table td
+{
+    white-space: nowrap;
+}
+.right table td span{
+    width: 100%;
+    display: block;
+}
+
+.right .top{
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 100%;
+}
+.right .knowledgebase{
+    width: 70%;
+    /* height: 100px; */
+    float: left
+}
+.right .topDrivers{
+    
+    width: 30%;
+    float:left;
+}
+.right .topDrivers .card{
+    margin-bottom: 10px;
+    width: 100%;
+    flex-direction: row;
+    padding: 8px 10px 0 10px;
+    background-color: #eee;
+    border:none;
+}
+.right .topDrivers .card img{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    cursor: pointer;
+
+
+}
+.right .topDrivers .card .detail{
+    display: inline-block;
+    width: 140px;
+    margin-left:10px;
+    margin-right:10px;
+
+}
+.right .topDrivers .card .detail .card-title{
+    font-size: 14px;
+
+}
+.right .topDrivers .card .detail .card-title.email{
+    font-size: 12px;
+}
+.right .topDrivers .card .orders .card-title{
+    font-size: 14px;
+    float: right;
+}
+.card-body .card-title svg{
+    opacity: 0.4;
+    margin-right: 10px;
+    margin-left: 14px;
+}
+.card-body .card-title h5{
+    margin-right: 2px;
+}
+.card-body .card-title{
+    font-size: 14px;
+}
+.chart{
+    background: url("../images/chart.jpg");
+    height: 408px;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+.infoCards .bg-danger{
+    background-color: #3366FF33 !important;
+    
+}
+.infoCards .bg-warning{
+    background: #FF333F33 !important;
+    
+}
+.infoCards .bg-info{
+    background: #FF953333 !important;
+    
+}
+
+.infoCards .card-title{
+    margin-bottom: 0 !important;
+    
+}
+
+svg{
+    cursor: pointer;
+}
+
+.right .top .header-section{
+    width: 100%;
+    height: 50px;
+    /* border: 2px solid red; */
+    margin-bottom: 10px;
+    display: flex;
+    /* flex-direction: row; */
+    gap: 20px;
+    align-items: center;
+    /* justify-content: center; */
+}
+.right .top .header-section h5{
+    font-size: 24px;
+    font-weight: 400;
+    color: #2E3A59;
+
+}
+.right .top .header-section span{
+    font-size: 12px;
+    font-weight: 400;
+
+}
+.right .top .header-section .highlights{
+    color: blue;
+    cursor: pointer;
+   
+}
+.right .top .header-section svg{
+    width: 20px;
+    height: 20px;
+    
+}
+.right .top .header-section .log-out{
+    float: right;
+    margin-left: 600px;
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* font-size: 12px; */
+    
+}
+
+.right .top .header-section .log-out h6{
+    font-size: 14px;
+    /* align-items: center; */
+}
+/* 
+.main-dashboard .content{
+    height:600px;
+    width: 100%;
+    background-color: rgb(222, 108, 8);
+    display: inline-block;
+    
+}
+.main-dashboard .content .card {
+    width: 25%;
+    margin: 20px;
+    border: 2px solid rgb(24, 205, 142);
+    color: aquamarine;
+    display: inline-block;
+    margin-bottom: 30px;
+
+}
+
+.header {
+    width: 80%;
+    display: flex;
+    height: 100px;
+    position: relative;
+    margin-bottom: 40px;
+    background-color: #e90fa0;
+    margin-left: 230px;
+}
+.header .left-half{
+    width: 47%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 80px;
+    margin-top: 10px;
+    color:beige;
+    border: 2px solid red;
+}
+.header .right-half{
+    width: 47%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 80px;
+    margin-top: 10px;
+    margin-left: 30px;
+    color:beige;
+    border: 2px solid rgb(97, 233, 18);
+    
+
+}
+.header .right-half .logout-icon{
+    font-size:large;
+    height:50px ;
+    width:50px ;
+    cursor:pointer;
+    background: #100e0e;
+    
+    margin-left: calc(90%);
+}
+
+.profile {
+    width: 30px;
+    height: 30px;
+}
+    
+    
+.bell-icon {
+    font-size: 20px;
+} */

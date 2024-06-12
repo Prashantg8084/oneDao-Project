@@ -1,0 +1,168 @@
+.main-container{
+    width: 100% !important;
+    display: inline-block;
+    padding: 40px 0;
+}
+
+.main-container .main{
+    width: 780px;
+    height: 581px;
+    /* top: 139px; */
+    position: relative;
+    margin:0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 5px 3px 20px 0px #00000066;
+    border: 1px solid #eee;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    gap:0;
+    padding:0;
+
+    /* display: inline-block; */
+}
+.main .p{
+    top: 50%;
+    left: 50%;
+    color: blue;
+}
+
+.main-container .main .left{
+    width: 400px;
+    height: 581px;
+    top: 139px;
+    /* border-radius: 30px 0px 0px 30px; */
+    /* opacity: 0px; */
+    background: url("../images/bgImage.jpg");
+    background-size: 100% 100%;
+    float: left;
+}
+.main-container .main .right{
+    padding: 20px;
+    position: relative;
+    width: 380px;
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    height: 581px;
+}
+.label{
+    font-weight: 600;
+    font-size: 12px;
+    color: #101010;
+    
+}
+::placeholder { 
+        
+    /* Firefox, Chrome, Opera */ 
+    color: blue; 
+}
+
+.right .formFields{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    vertical-align: middle;
+    /* align-items: center; */
+    justify-content: center;
+}
+.right .para-message{
+    margin-bottom: 20px;
+}
+.right .center{
+    align-items: center;
+    text-align: center;
+}
+.right h3{
+    font-size: 24px;
+    color: #252733;
+    
+}
+.right p{
+    color: #9FA2B4;
+    font-size: 14px;
+}
+.right p span{
+    color: #101010;
+    font-weight: 400;
+    
+    
+}
+.right p.top20{
+    margin-top:20px;
+}
+.right .error{
+    color: red;
+    font-size: 12px;
+}
+
+.right .otpElements{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.right .otpElements input{
+    border: 1px solid #989898
+}
+
+.right button{
+    height: 48px;
+}
+
+.main-container .main .right .row{
+    width: 100%;
+    margin-bottom: 10px;
+    /* height: 70px; */
+}
+.main-container .main .right .MuiInputLabel-root{
+    width: 100%;
+    
+    /* height: 20px; */
+}
+.links{
+    color:rgb(12, 12, 12);
+    cursor: pointer;
+}
+
+.main-container .main .right .btn{
+    width: 100%;
+    color: rgb(249, 243, 243);
+    background-color: rgb(9, 9, 9);
+    text-transform: capitalize;
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+
+@media (max-width: 768px){
+    .main-container .main{
+        width: 90%;
+        max-width: 600px;
+    }
+    .main-container .main .left{
+        width: 50%;
+    }
+    .main-container .main .right{
+        width: 50%;
+    }
+}
+
+@media (max-width: 600px){
+    .main-container .main{
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        max-width: 360px;
+    }
+    .main-container .main .left{
+        width: 100%;
+        height: 100px;
+    }
+    .main-container .main .right{
+        width: 100%;
+    }
+}
